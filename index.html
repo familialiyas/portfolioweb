@@ -52,7 +52,7 @@
     background:linear-gradient(to bottom,#0575E6,#40E682);
     display:flex;
     flex-direction:column;
-    padding:0;
+    padding:24px 0 0;
     min-height:520px;
   }
   .hero-photo{
@@ -129,6 +129,7 @@
   .pill{
     display:flex;
     align-items:center;
+    flex-shrink:0;
     gap:7px;
     background:var(--teal-light);
     color:var(--teal-dark);
@@ -231,6 +232,34 @@
   }
   .meter-fill{width:0%;height:100%;background:var(--green);border-radius:99px;transition:width 1s ease-out;}
   .audience-item .label{font-size:11px;color:var(--muted);font-weight:500;}
+
+  /* ---------- Carousel nav arrows (mouse/desktop only; touch devices swipe) ---------- */
+  .carousel-wrap{position:relative;}
+  .carousel-arrow{
+    display:none;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:34px;height:34px;
+    align-items:center;justify-content:center;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.92);
+    box-shadow:0 2px 10px rgba(26,42,58,0.25);
+    color:var(--teal-dark);
+    font-size:18px;
+    line-height:1;
+    cursor:pointer;
+    z-index:5;
+    transition:background 0.15s ease, transform 0.15s ease;
+  }
+  .carousel-arrow:hover{background:#ffffff;transform:translateY(-50%) scale(1.06);}
+  .carousel-arrow--left{left:2px;}
+  .carousel-arrow--right{right:2px;}
+  .carousel-arrow[disabled]{opacity:0;pointer-events:none;}
+  @media (hover:hover) and (pointer:fine){
+    .carousel-arrow{display:flex;}
+  }
 
   /* ---------- Top Viral Content: center-peek snap carousel ---------- */
   /* Side padding lets the first/last card reach center; gap controls how much
@@ -411,13 +440,13 @@
 
   /* ---------- Footer ---------- */
   footer{
-    background:var(--teal-deep);
-    color:var(--teal-light);
+    background:linear-gradient(to bottom,#0575E6,#40E682);
+    color:var(--white);
     text-align:center;
     padding:24px 20px;
   }
-  footer .handle{font-family:'Londrina Solid',sans-serif;font-size:18px;letter-spacing:1px;}
-  footer .copyright{font-size:11.5px;color:rgba(224,247,246,0.6);margin-top:4px;}
+  footer .handle{font-family:'Londrina Solid',sans-serif;font-size:18px;letter-spacing:1px;text-shadow:0 1px 4px rgba(0,0,0,0.25);}
+  footer .copyright{font-size:11.5px;color:rgba(255,255,255,0.75);margin-top:4px;text-shadow:0 1px 4px rgba(0,0,0,0.2);}
 
   /* ---------- Scroll reveal (fade + slide-up) ---------- */
   .reveal{
@@ -594,6 +623,9 @@
   <!-- Top Viral Content -->
   <section class="viral reveal">
     <h2 class="section-title">Top Viral Content</h2>
+    <div class="carousel-wrap">
+    <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Scroll left" data-scroll-target="viralCarousel">‹</button>
+    <button class="carousel-arrow carousel-arrow--right" type="button" aria-label="Scroll right" data-scroll-target="viralCarousel">›</button>
     <div class="viral-carousel" id="viralCarousel">
       <div class="viral-card">
         <a class="thumb" href="https://www.instagram.com/reel/DQwUdXYEjNa/" target="_blank" rel="noopener noreferrer">
@@ -634,6 +666,7 @@
         </a>
         <span class="viral-name">Belantara Resort</span>
       </div>
+    </div>
     </div>
   </section>
 
@@ -688,14 +721,18 @@
         <h3>🏨 Stays</h3>
         <p>Hotel &amp; resort reviews from a real family's perspective</p>
       </div>
-      <div class="reel-row">
-        <a class="reel-card" href="https://www.instagram.com/reel/DYmdPxIi3yh/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/amari.jpg" alt="Amari stay reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DN8TfW_ETGZ/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/marriot-putrajaya.jpg" alt="Marriott Putrajaya stay reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DYHSE5MT4U5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/parkroyal.jpg" alt="Parkroyal stay reel" loading="lazy"></a>
+      <div class="carousel-wrap">
+      <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Scroll left" data-scroll-target="reelRowStays">‹</button>
+      <button class="carousel-arrow carousel-arrow--right" type="button" aria-label="Scroll right" data-scroll-target="reelRowStays">›</button>
+      <div class="reel-row" id="reelRowStays">
         <a class="reel-card" href="https://www.instagram.com/reel/DX_2-ABC8Pe/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/sugar-marina.jpg" alt="Sugar Marina stay reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DK68jWcyZw5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/tg-leman.jpg" alt="Tanjung Leman stay reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DbIghbggRQx/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/timurbay.jpg" alt="Timurbay stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DN8TfW_ETGZ/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/marriot-putrajaya.jpg" alt="Marriott Putrajaya stay reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DVTCaGTky8T/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/wyndham-icity.jpg" alt="Wyndham iCity stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DbIghbggRQx/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/timurbay.jpg" alt="Timurbay stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DK68jWcyZw5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/tg-leman.jpg" alt="Tanjung Leman stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DYmdPxIi3yh/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/amari.jpg" alt="Amari stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DYHSE5MT4U5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/parkroyal.jpg" alt="Parkroyal stay reel" loading="lazy"></a>
+      </div>
       </div>
     </div>
 
@@ -704,13 +741,17 @@
         <h3>🗺️ Explore</h3>
         <p>Family days out, attractions &amp; adventures</p>
       </div>
-      <div class="reel-row">
+      <div class="carousel-wrap">
+      <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Scroll left" data-scroll-target="reelRowExplore">‹</button>
+      <button class="carousel-arrow carousel-arrow--right" type="button" aria-label="Scroll right" data-scroll-target="reelRowExplore">›</button>
+      <div class="reel-row" id="reelRowExplore">
+        <a class="reel-card" href="https://www.instagram.com/reel/DV3TS0khrmI/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/windmill.jpg" alt="Windmill reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DY6xulBiRFc/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/bangi-wonderland.jpg" alt="Bangi Wonderland reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DMZU6HAy-Fq/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/genting.jpg" alt="Genting reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DT2tEGlEWJW/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/petrosains.jpg" alt="Petrosains reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DLfWJ5xyWTv/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/tasik-cermin.jpg" alt="Tasik Cermin reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DV3TS0khrmI/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/windmill.jpg" alt="Windmill reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DYPRksZjfv9/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/yanui-beach.jpg" alt="Yanui Beach reel" loading="lazy"></a>
+      </div>
       </div>
     </div>
 
@@ -719,12 +760,16 @@
         <h3>✨ Interests</h3>
         <p>Hobbies, apps &amp; things we genuinely love</p>
       </div>
-      <div class="reel-row">
-        <a class="reel-card" href="https://www.instagram.com/reel/DSaEpI8keQB/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/bowling.jpg" alt="Bowling reel" loading="lazy"></a>
-        <a class="reel-card" href="https://www.instagram.com/reel/DaNblx-is_k/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/3d-print-darkside.jpg" alt="3D printing reel" loading="lazy"></a>
+      <div class="carousel-wrap">
+      <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Scroll left" data-scroll-target="reelRowInterests">‹</button>
+      <button class="carousel-arrow carousel-arrow--right" type="button" aria-label="Scroll right" data-scroll-target="reelRowInterests">›</button>
+      <div class="reel-row" id="reelRowInterests">
         <a class="reel-card" href="https://www.instagram.com/reel/DYZoOWUDNQN/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/3d-print.jpg" alt="3D printing reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DaNblx-is_k/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/3d-print-darkside.jpg" alt="3D printing reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DS2WjLjEXVF/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/annual-planning.jpg" alt="Annual planning reel" loading="lazy"></a>
         <a class="reel-card" href="https://www.instagram.com/reel/DUat2vbETks/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/durioo.jpg" alt="Durioo reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DSaEpI8keQB/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/bowling.jpg" alt="Bowling reel" loading="lazy"></a>
+      </div>
       </div>
     </div>
   </section>
@@ -786,6 +831,46 @@
           ticking = true;
         }
       }, { passive: true });
+    })();
+
+    // ---- Carousel nav arrows: click-to-scroll for mouse/desktop users ----
+    (function(){
+      var arrows = document.querySelectorAll('.carousel-arrow');
+      if(!arrows.length) return;
+
+      function updateDisabled(row){
+        var left = row.parentElement.querySelector('.carousel-arrow--left');
+        var right = row.parentElement.querySelector('.carousel-arrow--right');
+        var maxScroll = row.scrollWidth - row.clientWidth;
+        if(left) left.disabled = row.scrollLeft <= 4;
+        if(right) right.disabled = row.scrollLeft >= maxScroll - 4;
+      }
+
+      var rows = {};
+      arrows.forEach(function(btn){
+        var id = btn.getAttribute('data-scroll-target');
+        var row = document.getElementById(id);
+        if(!row) return;
+        rows[id] = row;
+
+        btn.addEventListener('click', function(){
+          var amount = Math.max(row.clientWidth * 0.8, 200);
+          var dir = btn.classList.contains('carousel-arrow--left') ? -1 : 1;
+          row.scrollBy({ left: dir * amount, behavior: 'smooth' });
+        });
+      });
+
+      Object.keys(rows).forEach(function(id){
+        var row = rows[id];
+        updateDisabled(row);
+        var ticking = false;
+        row.addEventListener('scroll', function(){
+          if(!ticking){
+            requestAnimationFrame(function(){ updateDisabled(row); ticking = false; });
+            ticking = true;
+          }
+        }, { passive: true });
+      });
     })();
 
     // ---- Scroll-triggered animations: count-up, progress bars, fade/slide-up ----

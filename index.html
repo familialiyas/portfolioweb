@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@FamiliAliyas — Media Kit</title>
+<meta name="description" content="@FamiliAliyas — family content creator media kit. Hotel & resort reviews, family adventures, and genuine recommendations.">
+<link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#1AADA5">
+<style>
+  :root{
+    --teal:#1AADA5;
+    --teal-dark:#0F7E78;
+    --teal-light:#E0F7F6;
+    --green:#1D9E75;
+    --navy:#1A2A3A;
+    --bg:#F4FFFE;
+    --white:#FFFFFF;
+    --muted:#5B6B72;
+
+    /* categorical chart colors — brand palette */
+    --chart-ig:#C13584;
+    --chart-fb:#145DC4;
+    --chart-tt:#D0114A;
+    --chart-th:#000000;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Fredoka',sans-serif;
+    background:var(--bg);
+    color:var(--navy);
+    max-width:480px;
+    margin:0 auto;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  h1,h2,h3{font-family:'Londrina Solid',sans-serif;font-weight:400;line-height:1.1;}
+  a{color:inherit;text-decoration:none;}
+
+  section{padding:32px 20px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(to bottom,#0575E6,#40E682);
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    min-height:520px;
+  }
+  .hero-photo{
+    display:block;
+    margin:auto auto 0;
+    position:relative;
+    z-index:1;
+    width:88%;
+    max-width:380px;
+    height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0px 10px 28px rgba(0,0,0,0.2));
+  }
+  .hero-label{
+    position:relative;
+    z-index:2;
+    width:100%;
+    background:rgba(0,0,0,0.2);
+    padding:10px 20px;
+    font-family:'Fredoka',sans-serif;
+    font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    letter-spacing:1px;
+  }
+  .hero-card{
+    position:relative;
+    z-index:2;
+    background:#ffffff;
+    border-radius:28px 28px 0 0;
+    padding:24px 20px;
+    margin-top:0;
+    box-shadow:0px -4px 24px rgba(0,0,0,0.08);
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:8px;
+  }
+  .hero-body{
+    font-family:'Fredoka',sans-serif;
+    color:#1A2A3A;
+    font-size:13px;
+    font-weight:700;
+  }
+  .hero-contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px 16px;
+    font-family:'Fredoka',sans-serif;
+    color:#6B8A8A;
+    font-size:12px;
+    font-weight:500;
+  }
+  .hero-contact-row span{display:inline-flex;align-items:center;gap:5px;}
+  .contact-icon{width:14px;height:14px;object-fit:contain;flex-shrink:0;}
+
+  /* ---------- Platform strip ---------- */
+  .platform-strip{
+    display:flex;
+    gap:8px;
+    padding:12px 16px;
+    background:var(--white);
+    justify-content:center;
+    justify-content:safe center;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .platform-strip::-webkit-scrollbar{display:none;}
+  .pill{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:var(--teal-light);
+    color:var(--teal-dark);
+    font-family:'Fredoka',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    padding:7px 14px;
+    border-radius:999px;
+    white-space:nowrap;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pill img{width:20px;height:20px;border-radius:50%;flex-shrink:0;}
+  .pill:hover,.pill:active{transform:translateY(-1px);box-shadow:0 3px 8px rgba(15,126,120,0.25);}
+
+  /* ---------- Section heading ---------- */
+  .section-title{
+    font-size:26px;
+    text-align:center;
+    color:var(--teal-dark);
+    margin-bottom:20px;
+    letter-spacing:0.5px;
+  }
+
+  /* ---------- Why Work With Us ---------- */
+  .why{background:var(--white);}
+
+  .donut-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:24px;
+  }
+  .donut-chart{position:relative;width:100%;max-width:330px;aspect-ratio:330/300;margin:0 auto;}
+  .donut{position:absolute;left:50%;top:18.333%;transform:translateX(-50%);width:57.576%;height:63.333%;}
+  .donut svg{width:100%;height:100%;transform:rotate(0deg);}
+  .donut-center{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .donut-center .value{font-family:'Londrina Solid',sans-serif;font-size:24px;color:var(--navy);}
+  .donut-center .label{font-size:11px;color:var(--muted);font-weight:500;}
+
+  .chart-leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+
+  .chart-label{position:absolute;display:flex;flex-direction:column;gap:2px;max-width:100px;}
+  .chart-label--right{text-align:left;align-items:flex-start;}
+  .chart-label--left{text-align:right;align-items:flex-end;}
+  .chart-label--ig{left:80.909%;top:39.333%;transform:translateY(-50%);}
+  .chart-label--fb{left:30.909%;top:82.333%;transform:translate(-100%,-50%);}
+  .chart-label--tt{left:16.667%;top:32%;transform:translate(-100%,-50%);}
+  .chart-label--th{left:36.364%;top:15.333%;transform:translate(-100%,-50%);}
+  .chart-label-row{display:flex;align-items:center;gap:4px;}
+  .chart-label-row img{width:30px;height:30px;border-radius:50%;flex-shrink:0;}
+  .chart-label-name{font-family:'Fredoka',sans-serif;font-size:11px;font-weight:600;color:var(--navy);white-space:nowrap;}
+  .chart-label-count{font-family:'Londrina Solid',sans-serif;font-size:16px;line-height:1;}
+  .chart-label-count--ig{color:var(--chart-ig);}
+  .chart-label-count--fb{color:var(--chart-fb);}
+  .chart-label-count--tt{color:var(--chart-tt);}
+  .chart-label-count--th{color:var(--chart-th);}
+
+  @media (max-width:360px){
+    .chart-label{max-width:78px;}
+    .chart-label-row{gap:3px;}
+    .chart-label-row img{width:20px;height:20px;}
+    .chart-label-name{font-size:10px;}
+    .chart-label-count{font-size:14px;}
+  }
+
+  .stats-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:20px;
+  }
+  .stat-tile{
+    background:var(--teal-light);
+    border-radius:14px;
+    padding:14px 12px;
+    text-align:center;
+  }
+  .stat-tile .value{font-family:'Londrina Solid',sans-serif;font-size:28px;color:var(--teal-dark);display:block;}
+  .stat-tile .label{font-size:11.5px;color:var(--muted);font-weight:500;margin-top:2px;display:block;}
+  .stat-tile .sublabel{font-size:10px;color:var(--muted);font-weight:400;margin-top:2px;display:block;opacity:0.85;}
+
+  .stats-footnote{font-size:10.5px;color:var(--muted);font-weight:400;font-style:italic;opacity:0.75;text-align:center;margin:-8px 0 20px;}
+
+  .audience-row{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+  }
+  .audience-item{text-align:center;}
+  .audience-icon{display:block;width:44px;height:44px;object-fit:contain;margin:0 auto 6px;}
+  .audience-item .pct{font-family:'Londrina Solid',sans-serif;font-size:26px;color:var(--green);}
+  .meter{
+    height:5px;background:var(--teal-light);
+    border-radius:99px;margin:6px 0;overflow:hidden;
+  }
+  .meter-fill{width:0%;height:100%;background:var(--green);border-radius:99px;transition:width 1s ease-out;}
+  .audience-item .label{font-size:11px;color:var(--muted);font-weight:500;}
+
+  /* ---------- Top Viral Content: center-peek snap carousel ---------- */
+  /* Side padding lets the first/last card reach center; gap controls how much
+     of the neighbor peeks in (~40px at any viewport ≤480px — see Fix notes).
+     Both are expressed relative to 50vw (≈half the body width on phones) and
+     clamped to their value at the 480px reference width so wider windows don't
+     blow the formula up. */
+  .viral-carousel{
+    display:flex;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;
+    padding:4px clamp(0px, calc(50vw - 100px), 140px) 4px;
+    gap:clamp(0px, calc(50vw - 165px), 50px);
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .viral-carousel::-webkit-scrollbar{display:none;}
+  .viral-card{
+    flex-shrink:0;
+    width:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    scroll-snap-align:center;
+    transform:scale(0.92);
+    opacity:0.5;
+    transition:transform 0.1s linear, opacity 0.1s linear;
+  }
+  .viral-card[data-default-center]{transform:scale(1);opacity:1;}
+  .viral-card .thumb{
+    display:block;
+    position:relative;
+    width:200px;
+    aspect-ratio:9/16;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(26,42,58,0.15);
+  }
+  .viral-card .thumb > img{width:100%;height:100%;object-fit:cover;}
+  .view-badge{
+    position:absolute;top:8px;left:8px;
+    background:rgba(26,42,58,0.75);
+    color:var(--white);
+    font-size:12px;font-weight:600;
+    padding:4px 8px;border-radius:6px;
+  }
+  .engagement-bar{
+    position:absolute;left:0;right:0;bottom:0;
+    height:36px;
+    background:linear-gradient(90deg,#0097B2,#7ED957);
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+  .engagement-bar span{
+    display:flex;align-items:center;gap:4px;
+    color:var(--white);
+    font-family:'Fredoka',sans-serif;
+    font-size:11px;font-weight:600;
+    white-space:nowrap;
+  }
+  .engagement-bar span img{width:16px;height:16px;flex-shrink:0;}
+  .viral-name{
+    margin-top:8px;
+    font-family:'Fredoka',sans-serif;
+    font-size:12px;
+    color:var(--navy);
+    text-align:center;
+  }
+
+  /* ---------- Past Collaborations: auto-scrolling marquee ---------- */
+  /* Card width ~140px + 12px gap puts three cards across a ~440px row
+     (480px body minus the section's 20px side padding). */
+  .collabs{background:var(--white);padding-left:0;padding-right:0;}
+  .collabs .section-title{padding:0 20px;}
+  .marquee{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  }
+  .marquee-track{
+    display:flex;
+    width:max-content;
+    gap:12px;
+    animation:scroll-left 32s linear infinite;
+  }
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  .marquee-card{
+    flex:0 0 180px;
+    height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .marquee-card img{
+    max-width:85%;
+    max-height:90px;
+    object-fit:contain;
+  }
+  @keyframes scroll-left{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
+  /* ---------- Our Content ---------- */
+  .content-category{margin-bottom:28px;}
+  .content-category:last-child{margin-bottom:0;}
+  .category-head{margin-bottom:12px;}
+  .category-head h3{font-size:19px;color:var(--teal-dark);}
+  .category-head p{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .reel-row{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+    padding-bottom:4px;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .reel-row::-webkit-scrollbar{display:none;}
+  .reel-card{
+    display:block;
+    flex-shrink:0;
+    width:110px;
+    aspect-ratio:9/16;
+    border-radius:12px;
+    overflow:hidden;
+    scroll-snap-align:start;
+    box-shadow:0 2px 8px rgba(26,42,58,0.12);
+  }
+  .reel-card img{width:100%;height:100%;object-fit:cover;}
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:linear-gradient(135deg,var(--teal),var(--teal-dark));
+    border-radius:24px;
+    margin:32px 20px;
+    padding:40px 24px 32px;
+    text-align:center;
+    color:var(--white);
+    width:calc(100% - 40px);
+  }
+  .polaroid{
+    display:inline-block;
+    transform:rotate(-3deg);
+    margin-bottom:20px;
+  }
+  .polaroid img{
+    width:280px;height:280px;object-fit:contain;
+    filter:drop-shadow(0 10px 16px rgba(0,0,0,0.3));
+  }
+  .contact h2{font-size:24px;margin-bottom:20px;}
+  .btn-contact{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--white);
+    color:var(--teal-dark);
+    font-weight:600;
+    font-size:15px;
+    padding:13px 26px;
+    border-radius:999px;
+  }
+  .whatsapp-icon{width:20px;height:20px;flex-shrink:0;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy);
+    color:var(--teal-light);
+    text-align:center;
+    padding:24px 20px;
+  }
+  footer .handle{font-family:'Londrina Solid',sans-serif;font-size:18px;letter-spacing:1px;}
+  footer .copyright{font-size:11.5px;color:rgba(224,247,246,0.6);margin-top:4px;}
+
+  /* ---------- Scroll reveal (fade + slide-up) ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .reveal.revealed{
+    opacity:1;
+    transform:translateY(0);
+  }
+  /* Our Content rows stagger relative to each other once the section is revealed */
+  .content-category.reveal:nth-of-type(1){transition-delay:0ms;}
+  .content-category.reveal:nth-of-type(2){transition-delay:100ms;}
+  .content-category.reveal:nth-of-type(3){transition-delay:200ms;}
+
+  /* ---------- Tap/click pulse ---------- */
+  @keyframes tap-pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(0.96);}
+    100%{transform:scale(1);}
+  }
+  .tap-pulse{animation:tap-pulse 150ms ease;}
+
+  /* ---------- Desktop hover lift (cards only) ---------- */
+  @media (hover:hover) and (pointer:fine){
+    .reel-card{transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    .reel-card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(26,42,58,0.2);}
+    .viral-card .thumb{transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    .viral-card .thumb:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,42,58,0.25);}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .marquee-track{animation:none;}
+    *{
+      animation-duration:0.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <img class="hero-photo" src="assets/images/family-photo-3.png" alt="@FamiliAliyas family photo" width="300" height="300" fetchpriority="high">
+    <div class="hero-label">Malaysian Family Content Creator</div>
+    <div class="hero-card">
+      <p class="hero-body">Salam &amp; hi! We are a family of five dedicated to sharing quality finds, from memorable travel experiences to everyday products that make parenting and family life better.</p>
+      <div class="hero-contact-row">
+        <span><img class="contact-icon" src="assets/images/location-icon.png" alt="" loading="lazy"> Kuala Lumpur</span>
+        <span><img class="contact-icon" src="assets/images/whatsapp-icon.png" alt="" loading="lazy"> 012-3454352</span>
+      </div>
+      <div class="hero-contact-row">
+        <span><img class="contact-icon" src="assets/images/email-icon.png" alt="" loading="lazy"> familialiyas.my@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform strip -->
+  <nav class="platform-strip reveal" aria-label="Platforms">
+    <a class="pill" href="https://www.instagram.com/familialiyas" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/instagram-icon.png" alt="" loading="lazy">Instagram
+    </a>
+    <a class="pill" href="https://www.tiktok.com/@familialiyas" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/tiktok-icon.png" alt="" loading="lazy">TikTok
+    </a>
+    <a class="pill" href="https://www.facebook.com/familialiyas" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/facebook-icon.png" alt="" loading="lazy">Facebook
+    </a>
+    <a class="pill" href="https://www.threads.com/familialiyas" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/threads-icon.png" alt="" loading="lazy">Threads
+    </a>
+  </nav>
+
+  <!-- Why Work With Us -->
+  <section class="why">
+    <h2 class="section-title">Why Work With Us</h2>
+
+    <div class="donut-wrap">
+      <div class="donut-chart">
+        <div class="donut">
+          <svg viewBox="0 0 42 42">
+            <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--chart-ig)" stroke-width="6" stroke-dasharray="38.98 61.02" stroke-dashoffset="25"></circle>
+            <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--chart-fb)" stroke-width="6" stroke-dasharray="33.80 66.20" stroke-dashoffset="-14.78"></circle>
+            <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--chart-tt)" stroke-width="6" stroke-dasharray="17.05 82.95" stroke-dashoffset="-49.38"></circle>
+            <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--chart-th)" stroke-width="6" stroke-dasharray="6.97 93.03" stroke-dashoffset="-67.23"></circle>
+          </svg>
+          <div class="donut-center">
+            <span class="value" data-countup="73400" data-comma="true" data-suffix="+">73,400+</span>
+            <span class="label">Community</span>
+          </div>
+        </div>
+
+        <svg class="chart-leaders" viewBox="0 0 330 300">
+          <polyline points="252,121 260,118 267,118" fill="none" stroke="var(--chart-ig)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <polyline points="125,233 118,247 102,247" fill="none" stroke="var(--chart-fb)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <polyline points="85,104 71,96 55,96" fill="none" stroke="var(--chart-tt)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <polyline points="141,61 136,46 120,46" fill="none" stroke="var(--chart-th)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <circle cx="252" cy="121" r="3" fill="var(--chart-ig)"></circle>
+          <circle cx="125" cy="233" r="3" fill="var(--chart-fb)"></circle>
+          <circle cx="85" cy="104" r="3" fill="var(--chart-tt)"></circle>
+          <circle cx="141" cy="61" r="3" fill="var(--chart-th)"></circle>
+        </svg>
+
+        <div class="chart-label chart-label--right chart-label--ig">
+          <div class="chart-label-row"><img src="assets/images/instagram-icon.png" alt="" loading="lazy"><span class="chart-label-name">Instagram</span></div>
+          <span class="chart-label-count chart-label-count--ig" data-countup="29.2" data-decimals="1" data-suffix="k">29.2k</span>
+        </div>
+        <div class="chart-label chart-label--left chart-label--fb">
+          <div class="chart-label-row"><span class="chart-label-name">Facebook</span><img src="assets/images/facebook-icon.png" alt="" loading="lazy"></div>
+          <span class="chart-label-count chart-label-count--fb" data-countup="25.4" data-decimals="1" data-suffix="k">25.4k</span>
+        </div>
+        <div class="chart-label chart-label--left chart-label--tt">
+          <div class="chart-label-row"><span class="chart-label-name">TikTok</span><img src="assets/images/tiktok-icon.png" alt="" loading="lazy"></div>
+          <span class="chart-label-count chart-label-count--tt" data-countup="13.1" data-decimals="1" data-suffix="k">13.1k</span>
+        </div>
+        <div class="chart-label chart-label--left chart-label--th">
+          <div class="chart-label-row"><span class="chart-label-name">Threads</span><img src="assets/images/threads-icon.png" alt="" loading="lazy"></div>
+          <span class="chart-label-count chart-label-count--th" data-countup="5.7" data-decimals="1" data-suffix="k">5.7k</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-grid reveal">
+      <div class="stat-tile">
+        <span class="value" data-countup="1.16" data-decimals="2" data-suffix="M+">1.16M+</span>
+        <span class="label">Combined Views</span>
+        <span class="sublabel">90 days · IG, FB &amp; TikTok</span>
+      </div>
+      <div class="stat-tile">
+        <span class="value" data-countup="6.6" data-decimals="1" data-suffix="%">6.6%</span>
+        <span class="label">Engagement Rate</span>
+        <span class="sublabel">Instagram, typical post</span>
+      </div>
+      <div class="stat-tile">
+        <span class="value" data-countup="55" data-suffix="%">55%</span>
+        <span class="label">DM-to-Click Rate</span>
+        <span class="sublabel">Comment-keyword auto-DM funnel</span>
+      </div>
+      <div class="stat-tile">
+        <span class="value" data-countup="23" data-suffix="%">23%</span>
+        <span class="label">Visit-to-Follow Rate</span>
+        <span class="sublabel">Combined, all platforms</span>
+      </div>
+    </div>
+
+    <p class="stats-footnote">Source: Meta Business Suite, TikTok Analytics &amp; auto-DM data, Apr–Jul 2026</p>
+
+    <div class="audience-row">
+      <div class="audience-item">
+        <img class="audience-icon" src="assets/images/malaysia-flag.png" alt="" loading="lazy">
+        <span class="pct">95%</span>
+        <div class="meter"><div class="meter-fill" data-target="95"></div></div>
+        <span class="label">Malaysian young families</span>
+      </div>
+      <div class="audience-item">
+        <img class="audience-icon" src="assets/images/female-icon.png" alt="" loading="lazy">
+        <span class="pct">65%</span>
+        <div class="meter"><div class="meter-fill" data-target="65"></div></div>
+        <span class="label">Female decision maker</span>
+      </div>
+      <div class="audience-item">
+        <img class="audience-icon" src="assets/images/age-diamond.png" alt="" loading="lazy">
+        <span class="pct">65%</span>
+        <div class="meter"><div class="meter-fill" data-target="65"></div></div>
+        <span class="label">Age 25–44</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Viral Content -->
+  <section class="viral reveal">
+    <h2 class="section-title">Top Viral Content</h2>
+    <div class="viral-carousel" id="viralCarousel">
+      <div class="viral-card">
+        <a class="thumb" href="https://www.instagram.com/reel/DQwUdXYEjNa/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/thumbnails/viral/dusun-bonda.jpg" alt="Dusun Bonda reel thumbnail" loading="lazy">
+          <span class="view-badge">▶ 738K</span>
+          <div class="engagement-bar">
+            <span><img src="assets/images/like-white-icon.png" alt="" loading="lazy">9k</span>
+            <span><img src="assets/images/comment-white-icon.png" alt="" loading="lazy">4k</span>
+            <span><img src="assets/images/share-white-icon.png" alt="" loading="lazy">3k</span>
+            <span><img src="assets/images/save-white-icon.png" alt="" loading="lazy">2k</span>
+          </div>
+        </a>
+        <span class="viral-name">Dusun Bonda</span>
+      </div>
+      <div class="viral-card" data-default-center>
+        <a class="thumb" href="https://www.instagram.com/reel/DSH7hZIkobA/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/thumbnails/viral/beacon-resort.jpg" alt="Beacon Resort reel thumbnail" loading="lazy">
+          <span class="view-badge">▶ 3.5M</span>
+          <div class="engagement-bar">
+            <span><img src="assets/images/like-white-icon.png" alt="" loading="lazy">76k</span>
+            <span><img src="assets/images/comment-white-icon.png" alt="" loading="lazy">23k</span>
+            <span><img src="assets/images/share-white-icon.png" alt="" loading="lazy">43k</span>
+            <span><img src="assets/images/save-white-icon.png" alt="" loading="lazy">37k</span>
+          </div>
+        </a>
+        <span class="viral-name">Beacon Resort</span>
+      </div>
+      <div class="viral-card">
+        <a class="thumb" href="https://www.instagram.com/reel/DMDIAEmxQHi/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/thumbnails/viral/belantara-resort.jpg" alt="Belantara Resort reel thumbnail" loading="lazy">
+          <span class="view-badge">▶ 600K</span>
+          <div class="engagement-bar">
+            <span><img src="assets/images/like-white-icon.png" alt="" loading="lazy">8k</span>
+            <span><img src="assets/images/comment-white-icon.png" alt="" loading="lazy">2k</span>
+            <span><img src="assets/images/share-white-icon.png" alt="" loading="lazy">7k</span>
+            <span><img src="assets/images/save-white-icon.png" alt="" loading="lazy">5k</span>
+          </div>
+        </a>
+        <span class="viral-name">Belantara Resort</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Collaborations -->
+  <section class="collabs reveal">
+    <h2 class="section-title">Past Collaborations</h2>
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="marquee-card"><img src="assets/brands/amari-phuket-logo.jpg" alt="Amari Phuket" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/avis-logo.jpg" alt="Avis" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/b-duck-logo.jpg" alt="B.Duck" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/beacon-resort-logo.jpg" alt="Beacon Resort" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/belantara-resort-logo.jpg" alt="Belantara Resort" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/bomb-battle-logo.jpg" alt="Bomb Battle" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/durioo-plus-logo.jpg" alt="Durioo+" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/dusun-bonda-logo.jpg" alt="Dusun Bonda" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/glamz-genting-logo.jpg" alt="Glamz Genting" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/klook-logo.jpg" alt="Klook" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/marriott-putrajaya-logo.jpg" alt="Marriott Putrajaya" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/parkroyal-penang-logo.jpg" alt="Parkroyal Penang" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/sugar-marina-logo.jpg" alt="Sugar Marina" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/tanjung-point-logo.jpg" alt="Tanjung Point" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/the-blanket-logo.jpg" alt="The Blanket" loading="lazy"></div>
+        <div class="marquee-card"><img src="assets/brands/trip-com-logo.jpg" alt="Trip.com" loading="lazy"></div>
+        <!-- duplicated set for seamless loop -->
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/amari-phuket-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/avis-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/b-duck-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/beacon-resort-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/belantara-resort-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/bomb-battle-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/durioo-plus-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/dusun-bonda-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/glamz-genting-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/klook-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/marriott-putrajaya-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/parkroyal-penang-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/sugar-marina-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/tanjung-point-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/the-blanket-logo.jpg" alt="" loading="lazy"></div>
+        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/trip-com-logo.jpg" alt="" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Content -->
+  <section class="our-content">
+    <h2 class="section-title">Highlights</h2>
+
+    <div class="content-category reveal">
+      <div class="category-head">
+        <h3>🏨 Stays</h3>
+        <p>Hotel &amp; resort reviews from a real family's perspective</p>
+      </div>
+      <div class="reel-row">
+        <a class="reel-card" href="https://www.instagram.com/reel/DYmdPxIi3yh/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/amari.jpg" alt="Amari stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DN8TfW_ETGZ/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/marriot-putrajaya.jpg" alt="Marriott Putrajaya stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DYHSE5MT4U5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/parkroyal.jpg" alt="Parkroyal stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DX_2-ABC8Pe/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/sugar-marina.jpg" alt="Sugar Marina stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DK68jWcyZw5/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/tg-leman.jpg" alt="Tanjung Leman stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DbIghbggRQx/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/timurbay.jpg" alt="Timurbay stay reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DVTCaGTky8T/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/stays/wyndham-icity.jpg" alt="Wyndham iCity stay reel" loading="lazy"></a>
+      </div>
+    </div>
+
+    <div class="content-category reveal">
+      <div class="category-head">
+        <h3>🗺️ Explore</h3>
+        <p>Family days out, attractions &amp; adventures</p>
+      </div>
+      <div class="reel-row">
+        <a class="reel-card" href="https://www.instagram.com/reel/DY6xulBiRFc/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/bangi-wonderland.jpg" alt="Bangi Wonderland reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DMZU6HAy-Fq/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/genting.jpg" alt="Genting reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DT2tEGlEWJW/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/petrosains.jpg" alt="Petrosains reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DLfWJ5xyWTv/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/tasik-cermin.jpg" alt="Tasik Cermin reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DV3TS0khrmI/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/windmill.jpg" alt="Windmill reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DYPRksZjfv9/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/explore/yanui-beach.jpg" alt="Yanui Beach reel" loading="lazy"></a>
+      </div>
+    </div>
+
+    <div class="content-category reveal">
+      <div class="category-head">
+        <h3>✨ Interests</h3>
+        <p>Hobbies, apps &amp; things we genuinely love</p>
+      </div>
+      <div class="reel-row">
+        <a class="reel-card" href="https://www.instagram.com/reel/DSaEpI8keQB/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/bowling.jpg" alt="Bowling reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DaNblx-is_k/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/3d-print-darkside.jpg" alt="3D printing reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DYZoOWUDNQN/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/3d-print.jpg" alt="3D printing reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DS2WjLjEXVF/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/annual-planning.jpg" alt="Annual planning reel" loading="lazy"></a>
+        <a class="reel-card" href="https://www.instagram.com/reel/DUat2vbETks/" target="_blank" rel="noopener noreferrer"><img src="assets/thumbnails/interests/durioo.jpg" alt="Durioo reel" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact reveal">
+    <div class="polaroid">
+      <img src="assets/images/polaroid.png" alt="@FamiliAliyas family polaroid photo" loading="lazy">
+    </div>
+    <h2>Let's Build Something Together</h2>
+    <a class="btn-contact" href="https://wa.me/60123454352" target="_blank" rel="noopener">
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="12" fill="#25D366"></circle>
+        <path d="M12 5.5a6.5 6.5 0 0 0-5.6 9.8L5.5 18.5l3.3-.9A6.5 6.5 0 1 0 12 5.5Zm3.8 9.2c-.2.5-1 1-1.4 1-.4 0-.8.1-2.6-.6-2.2-.9-3.6-3.1-3.7-3.3-.1-.1-.9-1.1-.9-2.2s.6-1.5.8-1.8c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.7c.1.1.1.3 0 .4l-.3.4c-.1.1-.2.3-.1.5.2.4.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.1.2.1.4.1.5-.1l.5-.6c.2-.2.4-.3.6-.2l1.5.7c.2.1.3.1.4.2.1.2.1.7-.1 1.1Z" fill="#fff"></path>
+      </svg>
+      Contact Us Now
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="handle">@FAMILIALIYAS</div>
+    <div class="copyright">© 2026</div>
+  </footer>
+
+  <script>
+    (function(){
+      var track = document.getElementById('viralCarousel');
+      if(!track) return;
+      var cards = track.querySelectorAll('.viral-card');
+
+      function updateCarousel(){
+        var centerX = track.scrollLeft + track.clientWidth / 2;
+        cards.forEach(function(card){
+          var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+          var t = Math.min(Math.abs(cardCenter - centerX) / card.offsetWidth, 1);
+          card.style.transform = 'scale(' + (1 - t * 0.08) + ')';
+          card.style.opacity = String(1 - t * 0.5);
+        });
+      }
+
+      var defaultCenter = track.querySelector('.viral-card[data-default-center]');
+      if(defaultCenter){
+        track.scrollLeft = defaultCenter.offsetLeft + defaultCenter.offsetWidth / 2 - track.clientWidth / 2;
+      }
+      updateCarousel();
+
+      var ticking = false;
+      track.addEventListener('scroll', function(){
+        if(!ticking){
+          requestAnimationFrame(function(){ updateCarousel(); ticking = false; });
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // ---- Scroll-triggered animations: count-up, progress bars, fade/slide-up ----
+    // Gated behind the first real scroll event so nothing fires just because a
+    // section happens to already be visible on a tall viewport at page load —
+    // "nothing should animate before the user scrolls to it" must hold even then.
+    (function(){
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var hasIO = 'IntersectionObserver' in window;
+
+      function setupCountUp(){
+        if(prefersReducedMotion) return; // leave the static final numbers as-is
+        var whySection = document.querySelector('.why');
+        var countUpTargets = document.querySelectorAll('[data-countup]');
+        if(!whySection || !countUpTargets.length || !hasIO) return;
+
+        function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+        function formatCount(value, decimals, suffix, comma, step){
+          var v = value;
+          if(step){ v = Math.round(v / step) * step; }
+          var text = decimals > 0 ? v.toFixed(decimals) : String(Math.round(v));
+          if(comma){
+            var parts = text.split('.');
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            text = parts.join('.');
+          }
+          return text + suffix;
+        }
+
+        function runCountUp(el){
+          var target = parseFloat(el.getAttribute('data-countup'));
+          var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+          var suffix = el.getAttribute('data-suffix') || '';
+          var comma = el.getAttribute('data-comma') === 'true';
+          var step = el.getAttribute('data-step') ? parseFloat(el.getAttribute('data-step')) : null;
+          var duration = 1500;
+          var startTime = null;
+
+          function frame(now){
+            if(startTime === null) startTime = now;
+            var progress = Math.min((now - startTime) / duration, 1);
+            el.textContent = formatCount(target * easeOutCubic(progress), decimals, suffix, comma, step);
+            if(progress < 1){
+              requestAnimationFrame(frame);
+            } else {
+              el.textContent = formatCount(target, decimals, suffix, comma, step);
+            }
+          }
+          requestAnimationFrame(frame);
+        }
+
+        var countUpObserver = new IntersectionObserver(function(entries, obs){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              countUpTargets.forEach(runCountUp);
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        countUpObserver.observe(whySection);
+      }
+
+      function setupProgressBars(){
+        var audienceRow = document.querySelector('.audience-row');
+        var meters = document.querySelectorAll('.meter-fill[data-target]');
+        if(!audienceRow || !meters.length) return;
+
+        function fillMeters(){
+          meters.forEach(function(el, i){
+            setTimeout(function(){
+              el.style.width = el.getAttribute('data-target') + '%';
+            }, i * 150);
+          });
+        }
+
+        if(!hasIO){
+          fillMeters();
+          return;
+        }
+        var meterObserver = new IntersectionObserver(function(entries, obs){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              fillMeters();
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        meterObserver.observe(audienceRow);
+      }
+
+      function setupReveal(){
+        var revealEls = document.querySelectorAll('.reveal');
+        if(!revealEls.length) return;
+
+        if(!hasIO){
+          revealEls.forEach(function(el){ el.classList.add('revealed'); });
+          return;
+        }
+        var revealObserver = new IntersectionObserver(function(entries, obs){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              entry.target.classList.add('revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function(el){ revealObserver.observe(el); });
+      }
+
+      var started = false;
+      function start(){
+        if(started) return;
+        started = true;
+        setupCountUp();
+        setupProgressBars();
+        setupReveal();
+      }
+
+      // If the page was already scrolled before this script ran (e.g. reload
+      // mid-scroll, anchor link), the user has already "scrolled to it" — start
+      // right away. Otherwise wait for the first real scroll gesture.
+      if(window.scrollY > 0 || document.documentElement.scrollTop > 0){
+        start();
+      } else {
+        window.addEventListener('scroll', start, { once: true, passive: true });
+      }
+    })();
+
+    // ---- Tap/click pulse ----
+    (function(){
+      var pulseEls = document.querySelectorAll('.btn-contact, .reel-card, .viral-card .thumb');
+      pulseEls.forEach(function(el){
+        el.addEventListener('click', function(){
+          el.classList.remove('tap-pulse');
+          void el.offsetWidth; // restart the animation on rapid re-clicks
+          el.classList.add('tap-pulse');
+        });
+        el.addEventListener('animationend', function(){
+          el.classList.remove('tap-pulse');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -331,38 +331,26 @@
     text-align:center;
   }
 
-  /* ---------- Past Collaborations: auto-scrolling marquee ---------- */
-  /* Card width ~140px + 12px gap puts three cards across a ~440px row
-     (480px body minus the section's 20px side padding). */
-  .collabs{background:var(--white);padding-left:0;padding-right:0;}
-  .collabs .section-title{padding:0 20px;}
-  .marquee{
-    overflow:hidden;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
-    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  /* ---------- Past Collaborations: static logo grid ---------- */
+  .collabs{background:var(--white);}
+  .collab-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:10px;
   }
-  .marquee-track{
-    display:flex;
-    width:max-content;
-    animation:scroll-left 18s linear infinite;
-  }
-  .marquee:hover .marquee-track{animation-play-state:paused;}
-  .marquee-card{
-    flex:0 0 180px;
-    margin-right:12px;
-    height:110px;
+  .collab-card{
+    background:var(--teal-light);
+    border-radius:12px;
+    height:72px;
     display:flex;
     align-items:center;
     justify-content:center;
+    padding:8px;
   }
-  .marquee-card img{
-    max-width:85%;
-    max-height:90px;
+  .collab-card img{
+    max-width:90%;
+    max-height:44px;
     object-fit:contain;
-  }
-  @keyframes scroll-left{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
   }
 
   /* ---------- Our Content ---------- */
@@ -481,7 +469,6 @@
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    .marquee-track{animation:none;}
     *{
       animation-duration:0.01ms !important;
       animation-iteration-count:1 !important;
@@ -673,42 +660,23 @@
   <!-- Past Collaborations -->
   <section class="collabs reveal">
     <h2 class="section-title">Past Collaborations</h2>
-    <div class="marquee">
-      <div class="marquee-track">
-        <div class="marquee-card"><img src="assets/brands/amari-phuket-logo.jpg" alt="Amari Phuket"></div>
-        <div class="marquee-card"><img src="assets/brands/avis-logo.jpg" alt="Avis"></div>
-        <div class="marquee-card"><img src="assets/brands/b-duck-logo.jpg" alt="B.Duck"></div>
-        <div class="marquee-card"><img src="assets/brands/beacon-resort-logo.jpg" alt="Beacon Resort"></div>
-        <div class="marquee-card"><img src="assets/brands/belantara-resort-logo.jpg" alt="Belantara Resort"></div>
-        <div class="marquee-card"><img src="assets/brands/bomb-battle-logo.jpg" alt="Bomb Battle"></div>
-        <div class="marquee-card"><img src="assets/brands/durioo-plus-logo.jpg" alt="Durioo+"></div>
-        <div class="marquee-card"><img src="assets/brands/dusun-bonda-logo.jpg" alt="Dusun Bonda"></div>
-        <div class="marquee-card"><img src="assets/brands/glamz-genting-logo.jpg" alt="Glamz Genting"></div>
-        <div class="marquee-card"><img src="assets/brands/klook-logo.jpg" alt="Klook"></div>
-        <div class="marquee-card"><img src="assets/brands/marriott-putrajaya-logo.jpg" alt="Marriott Putrajaya"></div>
-        <div class="marquee-card"><img src="assets/brands/parkroyal-penang-logo.jpg" alt="Parkroyal Penang"></div>
-        <div class="marquee-card"><img src="assets/brands/sugar-marina-logo.jpg" alt="Sugar Marina"></div>
-        <div class="marquee-card"><img src="assets/brands/tanjung-point-logo.jpg" alt="Tanjung Point"></div>
-        <div class="marquee-card"><img src="assets/brands/the-blanket-logo.jpg" alt="The Blanket"></div>
-        <div class="marquee-card"><img src="assets/brands/trip-com-logo.jpg" alt="Trip.com"></div>
-        <!-- duplicated set for seamless loop -->
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/amari-phuket-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/avis-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/b-duck-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/beacon-resort-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/belantara-resort-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/bomb-battle-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/durioo-plus-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/dusun-bonda-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/glamz-genting-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/klook-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/marriott-putrajaya-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/parkroyal-penang-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/sugar-marina-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/tanjung-point-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/the-blanket-logo.jpg" alt=""></div>
-        <div class="marquee-card" aria-hidden="true"><img src="assets/brands/trip-com-logo.jpg" alt=""></div>
-      </div>
+    <div class="collab-grid">
+      <div class="collab-card"><img src="assets/brands/amari-phuket-logo.jpg" alt="Amari Phuket"></div>
+      <div class="collab-card"><img src="assets/brands/avis-logo.jpg" alt="Avis"></div>
+      <div class="collab-card"><img src="assets/brands/b-duck-logo.jpg" alt="B.Duck"></div>
+      <div class="collab-card"><img src="assets/brands/beacon-resort-logo.jpg" alt="Beacon Resort"></div>
+      <div class="collab-card"><img src="assets/brands/belantara-resort-logo.jpg" alt="Belantara Resort"></div>
+      <div class="collab-card"><img src="assets/brands/bomb-battle-logo.jpg" alt="Bomb Battle"></div>
+      <div class="collab-card"><img src="assets/brands/durioo-plus-logo.jpg" alt="Durioo+"></div>
+      <div class="collab-card"><img src="assets/brands/dusun-bonda-logo.jpg" alt="Dusun Bonda"></div>
+      <div class="collab-card"><img src="assets/brands/glamz-genting-logo.jpg" alt="Glamz Genting"></div>
+      <div class="collab-card"><img src="assets/brands/klook-logo.jpg" alt="Klook"></div>
+      <div class="collab-card"><img src="assets/brands/marriott-putrajaya-logo.jpg" alt="Marriott Putrajaya"></div>
+      <div class="collab-card"><img src="assets/brands/parkroyal-penang-logo.jpg" alt="Parkroyal Penang"></div>
+      <div class="collab-card"><img src="assets/brands/sugar-marina-logo.jpg" alt="Sugar Marina"></div>
+      <div class="collab-card"><img src="assets/brands/tanjung-point-logo.jpg" alt="Tanjung Point"></div>
+      <div class="collab-card"><img src="assets/brands/the-blanket-logo.jpg" alt="The Blanket"></div>
+      <div class="collab-card"><img src="assets/brands/trip-com-logo.jpg" alt="Trip.com"></div>
     </div>
   </section>
 
@@ -831,29 +799,6 @@
           ticking = true;
         }
       }, { passive: true });
-    })();
-
-    // ---- Marquee: keep perceived speed consistent across screen widths ----
-    // The strip travels a fixed pixel distance per loop, so the same duration
-    // looks much faster on a narrow phone (where that distance is a bigger
-    // share of the visible strip) than on a wide desktop window. 18s felt
-    // right at the site's 480px reference width, so duration scales from
-    // that anchor: narrower screens get a proportionally longer duration.
-    (function(){
-      var track = document.querySelector('.marquee-track');
-      var container = document.querySelector('.marquee');
-      if(!track || !container) return;
-      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if(prefersReducedMotion) return;
-
-      function updateSpeed(){
-        var w = container.clientWidth;
-        if(!w) return;
-        var duration = (18 * 480) / w;
-        track.style.animationDuration = duration.toFixed(2) + 's';
-      }
-      updateSpeed();
-      window.addEventListener('resize', updateSpeed);
     })();
 
     // ---- Carousel nav arrows: click-to-scroll for mouse/desktop users ----
